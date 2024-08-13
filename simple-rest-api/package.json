@@ -1,0 +1,36 @@
+{
+	"name": "projeto-1",
+	"module": "src/server.ts",
+	"type": "module",
+	"scripts": {
+		"dev": "tsx watch src/server.ts",
+		"start": "node dist/server.cjs",
+		"build": "tsup src",
+		"format": "biome check --write .",
+		"db:migrate": "pnpm knex migrate:latest",
+		"db:generate": "pnpm knex migrate:make",
+		"knex": "tsx ./node_modules/knex/bin/cli.js",
+		"test": "vitest run",
+		"test:watch": "vitest"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.8.3",
+		"@types/better-sqlite3": "^7.6.11",
+		"@types/node": "^22.2.0",
+		"@types/supertest": "^6.0.2",
+		"dotenv": "^16.4.5",
+		"supertest": "^7.0.0",
+		"tsup": "^8.2.4",
+		"tsx": "^4.17.0",
+		"typescript": "^5.5.4",
+		"vite-tsconfig-paths": "^5.0.1",
+		"vitest": "^2.0.5"
+	},
+	"dependencies": {
+		"@fastify/cookie": "^9.3.1",
+		"better-sqlite3": "^11.1.2",
+		"fastify": "^4.28.1",
+		"knex": "^3.1.0",
+		"zod": "^3.23.8"
+	}
+}
