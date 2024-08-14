@@ -1,34 +1,46 @@
 {
 	"compilerOptions": {
-		// Enable latest features
-		"lib": ["ESNext", "DOM"],
-		"target": "ES2022",
-		"module": "ESNext",
-		"moduleDetection": "force",
-		"esModuleInterop": true,
-		"allowJs": true,
-
-		// Bundler mode
-		"moduleResolution": "Bundler",
-		"allowImportingTsExtensions": true,
-		"noEmit": true,
-
-		// Best practices
+		// Strict Type-Checking Options
 		"strict": true,
-		"skipLibCheck": true,
+		"strictNullChecks": true,
+
+		// Code Quality Checks
+		"allowUnusedLabels": false,
+		"allowUnreachableCode": false,
 		"noFallthroughCasesInSwitch": true,
+		"noUnusedLocals": true,
 
-		// Some stricter flags (disabled by default)
-		"noUnusedLocals": false,
-		"noUnusedParameters": false,
-		"forceConsistentCasingInFileNames": true,
-		"noPropertyAccessFromIndexSignature": false,
-
-		// Paths
+		// Module and Resolution Settings
+		"module": "ESNext",
+		"target": "ES2022",
+		"moduleResolution": "Bundler",
+		"moduleDetection": "force",
+		"resolveJsonModule": true,
 		"baseUrl": ".",
 		"paths": {
 			"@/*": ["./src/*"]
-		}
+		},
+
+		// JavaScript Settings
+		"allowJs": true,
+		"checkJs": true,
+
+		// Interoperability and Compatibility
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+
+		// Output and Auxiliary File Generation
+		"noEmit": true,
+		"declaration": true,
+		"declarationMap": true,
+		"sourceMap": true,
+		"pretty": true,
+		"preserveWatchOutput": true,
+
+		// Other Settings
+		"isolatedModules": true
 	},
+	"include": ["./**/*.ts", "./**/*.d.ts"],
 	"exclude": ["node_modules", "dist"]
 }
