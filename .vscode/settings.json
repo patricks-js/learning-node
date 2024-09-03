@@ -10,5 +10,8 @@
   "[json][jsonc]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
+  "[mdx][markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
   "cSpell.words": ["biomejs"]
 }
