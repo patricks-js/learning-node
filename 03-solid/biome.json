@@ -5,7 +5,7 @@
     "ignore": ["dist", "node_modules", "coverage"]
   },
   "organizeImports": {
-    "enabled": true
+    "enabled": false
   },
   "linter": {
     "enabled": true,
@@ -13,20 +13,17 @@
       "recommended": true
     }
   },
+  "formatter": {
+    "indentStyle": "space"
+  },
   "javascript": {
     "formatter": {
-      "quoteStyle": "single",
-      "semicolons": "asNeeded",
-      "quoteProperties": "preserve",
-      "indentStyle": "space",
-      "trailingCommas": "all"
+      "quoteProperties": "preserve"
     }
   },
   "json": {
-    "formatter": {
-      "enabled": true,
-      "indentStyle": "space",
-      "trailingCommas": "none"
+    "parser": {
+      "allowComments": true
     }
   }
 }

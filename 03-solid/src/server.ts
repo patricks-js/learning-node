@@ -1,8 +1,8 @@
-import { app } from './config/app'
-import { env } from './config/env'
+import { app } from "./config/app";
+import { env } from "./config/env";
 
-const port = env.PORT
-const host = '0.0.0.0'
+const port = env.PORT;
+const host = "0.0.0.0";
 
 app
   .listen({
@@ -10,5 +10,5 @@ app
     host,
   })
   .then(() => {
-    console.log(`Server listening on http://${host}:${port}`)
-  })
+    console.log(`Server listening on http://${host}:${port}`);
+  });
