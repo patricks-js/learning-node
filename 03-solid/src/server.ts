@@ -10,5 +10,11 @@ app
     host,
   })
   .then(() => {
-    console.log(`Server listening on http://${host}:${port}`);
+    console.log(
+      `🚀 HTTP server running. Docs available at http://${host}:${port}/docs`,
+    );
+  })
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
   });

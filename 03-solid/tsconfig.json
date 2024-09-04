@@ -11,9 +11,9 @@
     "noUnusedLocals": true,
 
     // Module and Resolution Settings
-    "module": "ESNext",
+    "module": "NodeNext",
     "target": "ES2022",
-    "moduleResolution": "Bundler",
+    "moduleResolution": "NodeNext",
     "moduleDetection": "force",
     "resolveJsonModule": true,
     "baseUrl": ".",
