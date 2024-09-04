@@ -1,0 +1,11 @@
+services:
+  gymmy-db:
+    image: bitnami/postgresql:latest
+    container_name: gymmy-db
+    restart: always
+    environment:
+      POSTGRESQL_USERNAME: ${DATABASE_USER}
+      POSTGRESQL_PASSWORD: ${DATABASE_PASSWORD}
+      POSTGRESQL_DATABASE: ${DATABASE_NAME}
+    ports:
+      - "5432:5432"
