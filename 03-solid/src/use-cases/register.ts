@@ -1,6 +1,6 @@
 import { env } from "@/config/env";
 import type { UserRepository } from "@/repositories/user-repository";
-import { hash } from "bcryptjs";
+import bcrypt from "bcryptjs";
 import { UserAlreadyExistsError } from "./errors";
 
 export interface RegisterInput {
@@ -25,7 +25,7 @@ export class RegisterUseCase {
       throw new UserAlreadyExistsError();
     }
 
-    const passwordHash = await hash(input.password, env.HASH_SALT);
+    const passwordHash = await bcrypt.hash(input.password, env.HASH_SALT);
 
     const user = await this.userRepository.create({
       name: input.name,

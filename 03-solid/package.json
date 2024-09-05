@@ -1,10 +1,10 @@
 {
   "name": "02-solid-rest-api",
   "main": "src/server.ts",
-  "module": "dist/server.js",
+  "type": "module",
   "scripts": {
-    "build": "tsup src --dts",
-    "start": "node dist/server.js",
+    "build": "tsup src",
+    "start": "node dist/server.cjs",
     "dev": "tsx watch src/server.ts",
     "format": "biome check --write .",
     "test": "vitest run",

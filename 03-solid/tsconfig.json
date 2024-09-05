@@ -1,46 +1,30 @@
 {
   "compilerOptions": {
-    // Strict Type-Checking Options
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleDetection": "force",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
     "strict": true,
     "strictNullChecks": true,
-
-    // Code Quality Checks
-    "allowUnusedLabels": false,
-    "allowUnreachableCode": false,
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
-
-    // Module and Resolution Settings
-    "module": "NodeNext",
-    "target": "ES2022",
-    "moduleResolution": "NodeNext",
-    "moduleDetection": "force",
-    "resolveJsonModule": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
-
-    // JavaScript Settings
     "allowJs": true,
     "checkJs": true,
-
-    // Interoperability and Compatibility
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-
-    // Output and Auxiliary File Generation
     "noEmit": true,
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
     "pretty": true,
-    "preserveWatchOutput": true,
-
-    // Other Settings
-    "isolatedModules": true
+    "isolatedModules": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
-  "include": ["./**/*.ts", "./**/*.d.ts"],
+  "include": ["src/*/*.ts", "./**/*.d.ts"],
   "exclude": ["node_modules", "dist"]
 }
