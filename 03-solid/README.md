@@ -2,7 +2,7 @@
 
 ## Functional Requirements
 
-- [ ] Should register successfully
+- [x] Should register successfully
 - [ ] Should authenticate correctly
 - [ ] Should retrieve the authenticated user profile
 - [ ] Should retrieve the user's check-ins
@@ -15,7 +15,7 @@
 ## Business Rules
 
 - [ ] Should not allow a user to
-  - [ ] Register with an existing email
+  - [x] Register with an existing email
   - [ ] Check-in if they are not authenticated
   - [ ] Check-in twice same day
   - [ ] Check-in if they are not nearby (100m) a gym
@@ -25,7 +25,7 @@
 
 ## Non-Functional Requirements
 
-- [ ] Passwords must be hashed
-- [ ] Data should be stored in a PostgreSQL database
+- [x] Passwords must be hashed
+- [x] Data should be stored in a PostgreSQL database
 - [ ] All data lists should be paginated with a limit of 20 items per page
 - [ ] User should be identified by JWT token
