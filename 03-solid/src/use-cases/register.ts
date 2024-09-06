@@ -1,5 +1,6 @@
 import { env } from "@/config/env";
 import type { UserRepository } from "@/repositories/user-repository";
+import type { User } from "@prisma/client";
 import bcrypt from "bcryptjs";
 import { UserAlreadyExistsError } from "./errors";
 
@@ -10,7 +11,7 @@ export interface RegisterInput {
 }
 
 export interface RegisterOutput {
-  userId: string;
+  user: User;
 }
 
 export class RegisterUseCase {
@@ -34,7 +35,7 @@ export class RegisterUseCase {
     });
 
     return {
-      userId: user.id,
+      user,
     };
   }
 }
