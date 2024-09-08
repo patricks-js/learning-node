@@ -4,7 +4,7 @@
 
 - [x] Should register successfully
 - [ ] Should authenticate correctly
-- [ ] Should retrieve the authenticated user profile
+- [x] Should retrieve the authenticated user profile
 - [ ] Should retrieve the user's check-ins
 - [ ] Should view user's check-in history
 - [ ] Should search nearby gyms
